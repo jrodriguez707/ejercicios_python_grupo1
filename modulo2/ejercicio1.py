@@ -1,14 +1,12 @@
-# Pedimos la nota al usuario
-nota = float(input("Introduce una nota (0-10): "))
+# Pedimos al usuario una temperatura en grados Celsius
+temperatura = float(input("Introduce una temperatura en °C: "))
 
-# Primero validamos que esté dentro del rango permitido
-if nota < 0 or nota > 10:
-    print("Error: la nota debe estar entre 0 y 10.")
-elif nota >= 9:
-    print("Excelente")
-elif nota >= 7:
-    print("Notable")
-elif nota >= 5:
-    print("Aprobado")
+# Comprobamos en qué rango se encuentra
+if temperatura < 0:
+    print("Estado sólido probable")
+elif temperatura < 100:
+    # Si no es menor que 0 y sí menor que 100
+    print("Estado líquido probable")
 else:
-    print("Reprobado")
+    # Si es 100 o mayor
+    print("Estado gaseoso probable")
